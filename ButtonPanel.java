@@ -34,7 +34,7 @@ public class ButtonPanel extends JPanel
 
         prize1.addActionListener(new MouseClicked());
         prize2.addActionListener(new MouseClicked());
-        bomb.addActionListener(new MouseClicked());
+        // bomb.addActionListener(new MouseClicked());
 
         buttonGroup[0] = bomb;
         buttonGroup[1] = prize1;
@@ -93,8 +93,10 @@ public class ButtonPanel extends JPanel
                 isGameFinished = endGame(WIN);
             }
 
-            else if(holder == bomb && !isGameFinished)
+            else if(holder == bomb && !isGameFinished);
             {
+                System.out.println(holder);
+                System.out.println("lose");
                 isGameFinished = endGame(LOSE);
             }
             
